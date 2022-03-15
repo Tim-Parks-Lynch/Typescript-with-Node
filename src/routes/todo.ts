@@ -3,18 +3,26 @@ import { Router } from 'express' //ts
 // const express = require('express)
 // const Router = express.Router
 
+import {
+	createTodo,
+	getTodos,
+	updateTodo,
+	deleteTodo,
+} from '../controllers/todo'
+
 const router = Router() // allows us to register middleware
 
 // Add a new todo
-router.post('/')
+// /todos/nothing
+router.post('/', createTodo)
 
 // Get all todos
-router.get('/')
+router.get('/', getTodos)
 
 // Update a todo
-router.patch('/:id')
+router.patch('/:id', updateTodo)
 
 // Delete a todo
-router.delete('/:id')
+router.delete('/:id', deleteTodo)
 
 export default router
