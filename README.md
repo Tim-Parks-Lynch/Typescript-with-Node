@@ -29,3 +29,7 @@
 # Starting
 
 - Run tsc -w to have typescript compile the ts file to js and to enter watch mode.
+
+# Going forward
+
+Look up Nest JS to go further with TS
